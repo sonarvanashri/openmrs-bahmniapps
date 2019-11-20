@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Firefox 69.0.0 (Windows 10.0.0)" package="unit" timestamp="2019-11-20T11:31:28" id="0" hostname="DESKTOP-G7JVS5E">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0"/>
+    </properties>
+    <testcase name="should provide audit log after initialization" time="0.054" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should gives audit logs from given date" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should provide previous logs from given index" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should display warning message when there is no event after initialization" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should provide next logs from given index" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should display warning if not event found" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should take today&apos;s date as default date during initialization" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should display warning and set default index if there is no event found after pressed prev button" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should display warning if there is no event found after pressed next button again and again" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should not update present logs if no logs found" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should replace logs when user use run report to show logs" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should not send if filter values is empty" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should give all logs filter by given username" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should give all logs filter by given patient identifier" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should give all logs filter by given patient identifier and username" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should not run report if given date field has future date" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).auditLogController"/>
+    <testcase name="should add new dummy orderSetMember" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).OrderSetController"/>
+    <testcase name="should retire already saved orderSetMember" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).OrderSetController"/>
+    <testcase name="should remove newly added orderSetMember" time="0.06" classname="unit Firefox 69.0.0 (Windows 10.0.0).OrderSetController"/>
+    <testcase name="should set concept uuid on selecting the concept by pressing down key and enter button" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).OrderSetController"/>
+    <testcase name="shouldn&apos;t through any exception if the orderSetMember model value doesn&apos;t match the concept display in orderSetMembers" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).OrderSetController"/>
+    <testcase name="service should retrieve" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).adminImportService"/>
+    <testcase name="Should show confirmation dialog if patient&apos;s visit type is not defaultVisitType" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should not show confirmation dialog if patient&apos;s visit type is defaultVisitType" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should close the visit and create a new encounter if dialog is confirmed" time="0.029" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should close the confirmation dialog if cancelled" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should create an encounter with in the current visit if continued" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should not create encounter with in the current visit if closed" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should show an error message and not close the current visit when defaultVisitType is not configured and yet the user decides to close the current visit and create a new visit of type defaultVisitType" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should show an error message when defaultVisitType is not configured and patient doesn&apos;t have any visit open while admitting" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Admit Patient action if the patient is discharged the visit has closed" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Undo Discharge action if the patient is discharged and visit is open" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Discharge Patient and Transfer Patient action if the patient is admitted" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Admit Patient action if the patient is not admitted in given visit" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should discharge patient and log the encounter when audit log is enabled" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController Discharge"/>
+    <testcase name="should call the ward service to retrieve the ward list" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).BedManagementController initialization of controller with bedDetails on rootScope undefined"/>
+    <testcase name="should reload if bed assigment changes" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).BedManagementController watch"/>
+    <testcase name="should remember the state in user prefs during toggle state" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardController"/>
+    <testcase name="should toggle ward view" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardController"/>
+    <testcase name="should assign bed to the patient" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardLayoutController assignBed"/>
+    <testcase name="should highlight for assignable view" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardLayoutController highlightCurrentPatient"/>
+    <testcase name="should not highlight for readonly view" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardLayoutController highlightCurrentPatient"/>
+    <testcase name="should not highlight for any other bed" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardLayoutController highlightCurrentPatient"/>
+    <testcase name="should set the bed details in scope" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardLayoutController setBedDetails"/>
+    <testcase name="Should go to patient dashboard" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardListController"/>
+    <testcase name="should call the ward service to retrieve the ward list" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardsController"/>
+    <testcase name="should group all diagnosis for a patient" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardDetails create"/>
+    <testcase name="should remove duplicate diagnosis if one of them is marked as ruled out" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardDetails create"/>
+    <testcase name="should add patientUuid and VisitUuid as hiddenAttributes" time="0.001" classname="unit Firefox 69.0.0 (Windows 10.0.0).WardDetails create"/>
+    <testcase name="service should retrieve" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).Query Service"/>
+    <testcase name="should create grid layout" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).bedManagementService createLayoutGrid"/>
+    <testcase name="service should retrieve beds for ward" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).Ward Service"/>
+    <testcase name="service should get wards list" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).Ward Service"/>
+    <testcase name="should return transfer encounter type uuid if the visit has admission details and no discharge details." time="0" classname="unit Firefox 69.0.0 (Windows 10.0.0).DispositionDisplayUtil getEncounterToDisplay"/>
+    <testcase name="should return admission encounter type if visit has no admission details." time="0.001" classname="unit Firefox 69.0.0 (Windows 10.0.0).DispositionDisplayUtil getEncounterToDisplay"/>
+    <testcase name="should return discharge encounter type if the visit has dischargeDetails" time="0" classname="unit Firefox 69.0.0 (Windows 10.0.0).DispositionDisplayUtil getEncounterToDisplay"/>
+    <testcase name="should fetch all locations,services,provider,specialities on initialization" time="0.03" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentConfigInitialization"/>
+    <testcase name="should not include retired providers in providers list" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentConfigInitialization"/>
+    <testcase name="should not fetch specialities if not configured" time="0.027" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentConfigInitialization"/>
+    <testcase name="should fetch selectedService if there is service" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentConfigInitialization"/>
+    <testcase name="should not fetch selectedService if there is no service" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentConfigInitialization"/>
+    <testcase name="should return empty object if stateParams is Empty" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentInitialization"/>
+    <testcase name="should return appointment object if stateParams has appointment" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentInitialization"/>
+    <testcase name="should return appointment if stateParams has uuid" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentInitialization"/>
+    <testcase name="should get all existing services" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AllAppointmentServicesController"/>
+    <testcase name="should open dialog for deleting appointmentservice" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).AllAppointmentServicesController"/>
+    <testcase name="should fetch all appointment locations on initialization" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController initialization"/>
+    <testcase name="should have default color for appointment service type" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController initialization"/>
+    <testcase name="should not fetch specialities if not configured" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController initialization"/>
+    <testcase name="should fetch all specialities on initialization if configured" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController initialization"/>
+    <testcase name="should fetch all services on initialization" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController initialization"/>
+    <testcase name="should validate to true if service name is unique" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController validateServiceName"/>
+    <testcase name="should validate to false if service name is already exists" time="0.024" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController validateServiceName"/>
+    <testcase name="should validate to false if case insensitive service name is exists" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController validateServiceName"/>
+    <testcase name="should validate to true if service name is empty" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController validateServiceName"/>
+    <testcase name="should not compare with itself on edit" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController validateServiceName"/>
+    <testcase name="should clear incorrect service start and end time and maxLoad if at least one weeklyAvailability is added" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save clear incorrect data"/>
+    <testcase name="should clear service maxLoad if at least one service type is added" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save clear incorrect data"/>
+    <testcase name="should not clear service level incorrect start and end time and maxLoad if weeklyAvailability is empty" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save clear incorrect data"/>
+    <testcase name="should not clear service maxLoad if no service type is added" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save clear incorrect data"/>
+    <testcase name="should save all appointment service details" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save"/>
+    <testcase name="should go to service list page after save" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save"/>
+    <testcase name="should show error message if form is invalid" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save"/>
+    <testcase name="should save all appointment service details only if confirmed on edit" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save"/>
+    <testcase name="should not call save if cancelled on edit" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController save"/>
+    <testcase name="should open confirmation dialog if we change the state" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController confirmationDialogOnStateChange"/>
+    <testcase name="should stay in current state if Cancel is selected" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController confirmationDialogOnStateChange"/>
+    <testcase name="should not save and go to target state if Don&apos;t save is selected" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceController confirmationDialogOnStateChange"/>
+    <testcase name="should close the dialog when appointment service throws an error" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).deleteAppointmentServiceController"/>
+    <testcase name="should delete the appointment service on confirmation" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).deleteAppointmentServiceController"/>
+    <testcase name="should close the dialog on cancel" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).deleteAppointmentServiceController"/>
+    <testcase name="should add all backlinks if configured on initialization" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsHeaderController"/>
+    <testcase name="should not add admin link if not configured" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsHeaderController"/>
+    <testcase name="should initialize enable calendar view from config" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AllAppointmentsController"/>
+    <testcase name="should navigate to calendar view if calendar button in pressed" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AllAppointmentsController"/>
+    <testcase name="should navigate to list view if list button is pressed" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AllAppointmentsController"/>
+    <testcase name="should get tabName from state.current" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AllAppointmentsController"/>
+    <testcase name="should init appointment with defaultAppointmentKind if there is no appointment in appointmentContext" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should init appointment with appointment in appointmentContext" time="0.024" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should set service details on serviceChange" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should set default duration if service duration does not exist on serviceChange" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should delete previous serviceType if selected on service change" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should assign default value when there is no duration for serviceType and previous minDuration is 20" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should change the duration of time slot based on serviceType when start time is changed" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should change the duration of time slot based on serviceType when service and service type is available and when start time is changed" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should set the isFilterOpen from state params" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController confirmationDialogOnStateChange"/>
+    <testcase name="should stay in current state if Cancel is selected" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController confirmationDialogOnStateChange"/>
+    <testcase name="should go to previous view with appointment date after saving the appointment" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController confirmationDialogOnStateChange"/>
+    <testcase name="should not check for conflicts with itself(same uuid), when editing an appointment" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not check for conflicts with cancelled appointments" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not conflict when the same patient has another appointment at end time of previous appointment" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should initialize patientAppointments, if an appointment is editing" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not set the warning message when start time is same as the start time of service availability" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not set the warning message when start time is before the service end time" time="0.074" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should set the warning message when start time is outside the service available time" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should set the warning message when start time is outside the service available time and multiple service available times are defined for a day" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not set the warning message when start time is within the second service available time and multiple service available times are defined for a day" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not set warning on start time when the service availability is not defined for a given day" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should reset the warning on start time to false when start time is undefined" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not set the warning message when end time is inside the service availability" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should set the warning on end time when it is outside the service availability" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should reset the warning on day to false if appointment date is undefined" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not set warning on a day and set default start and end times when the service weekly availability is not defined for a given day" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should set warning on a day and allowedStartTime and allowedEndTime to undefined when the service availability is not defined for a given day" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should remove warning on a day and set allowedStartTime and allowedEndTime when the service availability is defined for a given day" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should calculate warning messages for start time and end time when appointment date is changed" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should validate and set allowedStartTime and allowedEndTime when service weeklyAvailability is not defined but service start time and end time are defined" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should reset availability warnings when a service is selected" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should reset availability warnings when a service type is selected" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should not include endTime value in startTimeSlots and startTime value should not be included in endTimeSlots" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should get all slots for weekly availability" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should get empty slots when there is weekly availability but not for the given appointment day" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController availabilityValidations"/>
+    <testcase name="should trigger load calculation on date change" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should trigger load calculation on time change" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should not trigger load calculation on time change when service types are defined" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should not trigger load calculation on time change when timings are out of service availability" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should clear the existing slot info" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should assign currentLoad and maxAppointmentsLimit" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should only assign currentLoad of that day if no duration,startTime&amp;endTime,maxAppointmentsLimit present" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should calculate maxAppointmentsLimit from service duration,start&amp;endTime if service maxAppointmentsLimit is empty" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should assign currentLoad and maxAppointmentsLimit of availability" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should calculate maxAppointmentsLimit from service duration and availability start&amp;endTime if availability maxAppointmentsLimit is empty" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should not calculate slot info if appointment is booked outside the availability" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="outOfRange should be true when selected date having more than one availability slots, and startTime and endTime are not in one slot" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="outOfRange should be false when there is no weekly service and appointmentDate, startTime, endTime are false" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController loadCalculation"/>
+    <testcase name="should navigate to previous state" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should allow the user with Manage Own Appointment privilege to remove self from the appointment" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isUserAllowedToRemoveProvider"/>
+    <testcase name="should not allow the user with Manage Own Appointment privilege to remove other providers from the appointment" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isUserAllowedToRemoveProvider"/>
+    <testcase name="should allow the user with Manage Appointments privilege to remove other providers from the appointment" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isUserAllowedToRemoveProvider"/>
+    <testcase name="should not allow edit if it is past appointment irrespective of status" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should allow edit for scheduled appointment if is of current date" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should allow edit for checked-in appointment if is of current date" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should not allow edit for completed appointment if is of current date" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should not allow edit for cancelled appointment if is of current date" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should allow edit for scheduled appointment if is of future date" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should allow edit for checked-in appointment if is of future date" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should not allow edit for completed appointment if is of future date" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should not allow edit for cancelled appointment if is of future date" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isEditAllowed"/>
+    <testcase name="should call patient service when there is no url defined " time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController searchPatient"/>
+    <testcase name="should call the url specified in the config for patient search" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController searchPatient"/>
+    <testcase name="should retain previous minDuration when service type is unselected" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should dropDown have times list which are having entered number in hours of the allowed list" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should dropDown have all the allowed time list when the entered number is not in hours of the allowed list" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should include appointment provider if the provider is not available in all available providers" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should not affect the all providers when new appointment has created" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should return current user if the user has ownAppointments privilege" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should return all providers if the current user has manageAppointments privilege" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should return all providers if the current user does not have ownAppointments privilege" time="0.02" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController"/>
+    <testcase name="should enable notes if current provider is provider for the appointment and has manage own appointments privilege" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isCurrentProviderPartOfAppointment"/>
+    <testcase name="should disable notes if current provider is provider for the appointment and has manage own appointments privilege" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isCurrentProviderPartOfAppointment"/>
+    <testcase name="should return true if current provider has only manage own appointment privilege and does not have manage appointment privilege" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController canManageOwnAppointmentOnly"/>
+    <testcase name="should return false if current provider does not have only manage own appointment privilege" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController canManageOwnAppointmentOnly"/>
+    <testcase name="should return true if appointment does not have any provider" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController doesAppointmentHaveProvider"/>
+    <testcase name="should return false if appointment has any provider" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController doesAppointmentHaveProvider"/>
+    <testcase name="should not allow to edit the appointment fields if appointment has multiple providers and logged in user has manage own appointments privilege" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isFieldEditNotAllowed"/>
+    <testcase name="should allow to edit the appointment fields if appointment has only logged in user having manage own appointments privilege as the provider" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isFieldEditNotAllowed"/>
+    <testcase name="should not allow to edit the appointment fields if logged user has manage own privilege but appointment has other multiple providers" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCreateController isFieldEditNotAllowed"/>
+    <testcase name="should get tabName from state.current" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should map specialities to ivh tree" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should map selected services to state params" time="0.023" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should set service types to state params" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should select service types only when the service is not selected" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should reset ivh Tree, reset the filter and apply them on appointments" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should get providers, statusList and specialities" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should preselect the services to filter when services are not empty in filterParams" time="0.128" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should set the selectedStatusList" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should return false when filters are empty without serviceUuids, serviceTypeUuids and providerUuids" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should return false when filters are empty" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should return true when filters are not empty" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should filter all the selected services when clicked on show selected toggle" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should show all the service when clicked on all toggle" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should set state params when filter is expanded" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should reset state params when filter is minimized" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="if calender is open then statusList should not include cancelled" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should remove cancel status from statusList and selectedStatusList when user navigates to calendar view from list view" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should set statusList to default statusList when user navigates to list view from calender view" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should have &quot;No Provider&quot; in providers and should have providerUuids in selectedProviders when providerUuids are present in filterParams" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should reset searchText to undefined" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should have isSpecialitiesEnable and isServiceTypeEnabled" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should not inclued specialities in ivhTreeView when specialities are not enabled" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should not inclued specialities in ivhTreeView when specialities are not enabled" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should not inclued serviceTypes and should include specialities in ivhTreeView when service types are not enabled and specialities are enabled" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should inclued serviceTypes and specialities in ivhTreeView when service types and specialities are enabled" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should not inclued specialities in ivhTreeView when specialities are not enabled" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should not include specialities and service types in ivhTreeView when specialities and service types are not enabled" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should get providers only who are available for appointments" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should apply filter when selectedSpecialities is set" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should not include retired providers" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsFilterController"/>
+    <testcase name="should initialize enable calendar view from config" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsManageController"/>
+    <testcase name="should navigate to summary tab" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsManageController"/>
+    <testcase name="should navigate to appointments tab calendar view if configured" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsManageController"/>
+    <testcase name="should navigate to appointments tab list view if calendar view is not configured" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsManageController"/>
+    <testcase name="should get tabName from state.current" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsManageController"/>
+    <testcase name="should initialize to viewDate in stateParams if provided" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsSummaryController"/>
+    <testcase name="should construct dates array for current week on initialization" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsSummaryController"/>
+    <testcase name="should go to list view on clicking of appointment count" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsSummaryController"/>
+    <testcase name="should set service uuids and date when services and date are passed" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsSummaryController"/>
+    <testcase name="should set the appointments to the response data" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsSummaryController"/>
+    <testcase name="should set to true if it is current date" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsSummaryController"/>
+    <testcase name="should set to false if it is not current date" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsSummaryController"/>
+    <testcase name="should not fetch appointments when doFetchAppointmentsData is set to false" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should set doFetchAppointmentsData to false when weekView is set to false and state is changed to List View" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should get appointments for date" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should not get appointments for date if weekView is set to true" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should push &quot;No provider appointments&quot; resource when there are appointments with no provider" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should construct resources and events for appointments" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should append to existing event if they are of same slot &amp; provider &amp; service" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should not append to existing event if they are of same slot &amp; provider &amp; but not service" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should filter out the cancelled appointments" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should return true when there are no appointments for the selected date" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should not include &quot;No Provider&quot; in resources when there are no appointments with &quot;No Provider&quot;" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should include &quot;No Provider&quot; in resources appointments when there are appointments with &quot;No Provider&quot;" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should get config value for autoRefreshIntervalInSeconds" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should call interval function when autoRefreshIntervalInSeconds is defined" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should not call interval function when autoRefreshIntervalInSeconds is an invalid string" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should cancel interval when autoRefreshIntervalInSeconds is defined" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should not cancel interval when autoRefreshIntervalInSeconds is undefined" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should change the value of weekView from false to true when toggleWeekView is called" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should change the value of weekView from true to false when toggleWeekView is called" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should call searchAppointments when weekView is toggled from false to true" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should call getAllAppointments when weekView is toggled from true to false" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should get appointments for week when weekView is true" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should not get appointments for week when weekView is false" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should update viewDate of state params while fetching appointments for week when weekView is true" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsCalendarViewController"/>
+    <testcase name="should init events and eventSources and uiConfig with default values if not configured" time="0.031" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should init uiConfig with configured values" time="0.033" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should not be selectable if date is a past date" time="0.028" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should be selectable if date is today" time="0.028" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should be selectable if date is future date" time="0.036" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment even if the user has Manage privilege" time="0.203" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment even if the current user has ownManage privilege and current user is the provider" time="0.079" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment even if the current user has ownManage privilege and the appointment has no provider" time="0.037" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment if resource is undefined" time="0.03" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should not go to new appointment state on createAppointment if the user does not have Manage privilege" time="0.035" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should call calendarView pop up on eventClick with appointments and enableCreateAppointment true for current date" time="0.029" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should call calendarView pop up on eventClick with appointments and enableCreateAppointment true for future date" time="0.025" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should call calendarView pop up on eventClick with appointments and enableCreateAppointment false for past dates" time="0.028" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should reset the event and resources when appointments has been changed" time="0.043" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsDayCalendarController"/>
+    <testcase name="should init events and eventSources and uiConfig with default values if not configured" time="0.033" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should init uiConfig with configured values" time="0.029" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment even if the user has Manage privilege" time="0.031" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment even if the current user has ownManage privilege and current user is the provider" time="0.031" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment even if the current user has ownManage privilege and the appointment has no provider" time="0.03" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should go to new appointment state on createAppointment if resource is undefined" time="0.027" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should not go to new appointment state on createAppointment if the user does not have Manage privilege" time="0.028" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should call calendarView pop up on eventClick with appointments and enableCreateAppointment true for current date" time="0.039" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should call calendarView pop up on eventClick with appointments and enableCreateAppointment true for future date" time="0.023" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should reset the event when appointments has been changed" time="0.031" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsWeekCalendarController"/>
+    <testcase name="should initialize today&apos;s date if not viewDate is provided in stateParams" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should initialize to viewDate in stateParams if provided" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should initialize enable service types and enable specialities from config" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should initialize searchedPatient as true if search enabled and patient exists " time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should not get appointments for the date if searchedPatient is true" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should not fetch appointments when doFetchAppointmentsData is set to false" time="0.019" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should get appointments for date" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should select an appointment" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should unselect an appointment if is selected" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should filter appointments on loading list view" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should display searched patient appointment history" time="0.104" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should reset filtered appointments to its previous data" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController goBackToPreviousView"/>
+    <testcase name="should sort appointments by the sort column" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController goBackToPreviousView"/>
+    <testcase name="should reverse sort appointments if sorted on the same column consecutively" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController goBackToPreviousView"/>
+    <testcase name="should sort searched appointments by date in list view" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController goBackToPreviousView"/>
+    <testcase name="should have table info" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController goBackToPreviousView"/>
+    <testcase name="should filter the appointments on change of filter params" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController goBackToPreviousView"/>
+    <testcase name="should print the page with the appointments list" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should print the page with the default list view when configuration template url is not there" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should show a pop up on confirmAction" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should change status and show success message on confirmation on confirmAction" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should call passed function on cancel on confirmAction" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should show a pop up on undo checkIn" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should change status on confirmation on undo check in" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should get display of a json object" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should internationalize the keys if present of the json object" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should init with empty array if config is undefined" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isAllowedAction"/>
+    <testcase name="should init with configured actions if config is present" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isAllowedAction"/>
+    <testcase name="should return false if config is empty" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isAllowedAction"/>
+    <testcase name="should return true if action exists in config" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isAllowedAction"/>
+    <testcase name="should return false if action does not exist in config" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isAllowedAction"/>
+    <testcase name="should init with empty object if config is undefined" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should init with configured actions if config is present" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return false if no appointment is selected" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return false if allowedActionsByStatus is undefined" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return true if action exists in allowedActionsByStatus" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return false if action does not exist in allowedActionsByStatus" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="return true for isUndoCheckInAllowed if user allowed to do and selected appointment status is checkedIn" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="return false for isUndoCheckInAllowed if user does not have privilege and selected appointment status is checkedIn" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should get colors for config" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should get config value for autoRefreshIntervalInSeconds" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should call interval function when autoRefreshIntervalInSeconds is defined" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should not call interval function when autoRefreshIntervalInSeconds is an invalid string" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should cancel interval when autoRefreshIntervalInSeconds is defined" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should not cancel interval when autoRefreshIntervalInSeconds is undefined" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController"/>
+    <testcase name="should return true if maxAppointmentProviders config value is greater than 1" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isEditAllowed"/>
+    <testcase name="should return false if maxAppointmentProviders config value is 1 and logged provider is not in appointment" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController isEditAllowed"/>
+    <testcase name="should return true when enableResetAppointmentStatuses is not undefined" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return false when enableResetAppointmentStatuses is undefined" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return false if user does not have manageAppointment and self privilege but has reset privilege" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return false if user does not have resetAppointmentStatus privilege" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return false if user has required privileges but did not select appointment" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return false if select appointment status is not listed in configured reset statuses" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return false if configured reset statuses is not a list" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return false if selected appointment is Scheduled and enableResetAppointmentStatuses has Scheduled" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should return true if user have required privileges and selected appointment status is in reset configuration list" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should show a pop up on click of reset button" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="should change status on confirmation on reset" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsListViewController Reset appointment status functionality"/>
+    <testcase name="Shold toggle the display of color picker on click the picker multiple times" time="0.019" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="setColor should set the selectedColor field and close the color picker" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should close the color picker on clicking outside the picker, if the colorPicker is popped up" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should init view date to the last valid date if undefined" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).DatePicker"/>
+    <testcase name="should call function provided to ngChange when data is changed" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).DatePicker"/>
+    <testcase name="should call function provided to ngChange when data is changed and enter key is pressed" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).DatePicker"/>
+    <testcase name="should not call function provided to ngChange when data is not changed" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).DatePicker"/>
+    <testcase name="should call function provided to ngChange when data is changed and mouse is pressed outside" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).DatePicker"/>
+    <testcase name="should remove item from selectedValues" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).multiSelectAutocomplete"/>
+    <testcase name="should return the matched values when we pass the query" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).multiSelectAutocomplete"/>
+    <testcase name="should search for patient" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).Patient Search"/>
+    <testcase name="should build response map with patient name and identifier for list of patients" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).Patient Search"/>
+    <testcase name="should get appointments for a patient on select of patient" time="0.02" classname="unit Firefox 69.0.0 (Windows 10.0.0).Patient Search"/>
+    <testcase name="should clear patient if searchEnabled is false" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).Patient Search"/>
+    <testcase name="should search for patient appointments if state params has patient on init" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).Patient Search"/>
+    <testcase name="should build response map with only given name when family name is null for given patients" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).Patient Search"/>
+    <testcase name="should init availability and startOfWeek" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should take 2 as startOfWeek by default" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="isNew should return true if state is 0" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability checkState"/>
+    <testcase name="isEdit should return true if state is 1" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability checkState"/>
+    <testcase name="isReadOnly should return true if state is 2" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability checkState"/>
+    <testcase name="should return true if all fields are valid" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability validateAvailability"/>
+    <testcase name="should return false if all fields are empty" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability validateAvailability"/>
+    <testcase name="should return false if startTime is not filled" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability validateAvailability"/>
+    <testcase name="should return false if endTime is not filled" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability validateAvailability"/>
+    <testcase name="should return false if not even one day is selected" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability validateAvailability"/>
+    <testcase name="should return false if startTime is greater than endTime" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability validateAvailability"/>
+    <testcase name="should return false if startTime is equal to endTime" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability validateAvailability"/>
+    <testcase name="should add availability to weeklyAvailability list" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should not add availability if endTime is within existing duration" time="0.02" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should add availability if endTime falls on existing duration startTime" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should not add availability if startTime is within existing duration)" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should add availability if startTime falls on existing duration endTime)" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should not add availability if new duration is within existing duration)" time="0.016" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should not add availability if duration equals existing duration )" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should add availability(duration matches but not days)" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability addAvailability"/>
+    <testcase name="should clear max appointments limit if it is invalid" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should not clear max appointments limit if it is valid" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should not delete availability if not confirmed" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should delete availability from weeklyAvailability list if confirmed" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should change state to edit and take backup availability on enableEdit" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should change state to readonly and restore availability on cancel" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability"/>
+    <testcase name="should update availability on weeklyAvailability list and set its state to read only" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should add availability even if it overlaps with availability in list at the same index" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should not update availability if endTime is within existing duration)" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should add availability if endTime falls on existing duration startTime)" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should not add availability if startTime is within existing duration" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should add availability if startTime falls on existing duration endTime)" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should not add availability if duration is within existing duration)" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should not add availability if duration equals existing duration )" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should add availability if duration matches but not days)" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceAvailability updateAvailability"/>
+    <testcase name="should validate to false if duplicate service type name is added" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should validate to true if unique service type is added" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should clear the service type name and duration after adding a serviceType" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should add service type name and duration to service" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should be able to add new service type with same name and duration as that of a voided service type" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should clear the serviceType duration on clearing the serviceType name" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should set the serviceType duration to default duration when entering the serviceType name" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should open the confirmation dialog when trying to delete an unsaved service type" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should check for any future appointments against the saved service type trying to delete and throw an error if there are future non-cancelled appointment" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should check for any future appointments against the saved service type trying to delete and open confirmation dialog if there are no future non-cancelled appointment" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should close the dialog when delete transition is cancelled" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should delete the unsaved service type from the service type list on Delete confirmation" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should add void info to the saved service type on Delete confirmation" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).ServiceTypes"/>
+    <testcase name="should init view date to today if undefined" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekPicker"/>
+    <testcase name="should call function provided to ngChange when data is changed with week start day as Monday" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekPicker"/>
+    <testcase name="should call function provided to ngChange when data is changed with week start day as Sunday" time="0.017" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekPicker"/>
+    <testcase name="should set the view date to next week when goToNextWeek is clicked" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekPicker"/>
+    <testcase name="should set the view date to previous week when goToPreviousWeek is clicked" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekPicker"/>
+    <testcase name="should assign days to ngmodel" time="0.043" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekdaySelector"/>
+    <testcase name="should display first two letters of day name" time="0.04" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekdaySelector"/>
+    <testcase name="should toggle isSelected of a day when clicked" time="0.031" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekdaySelector"/>
+    <testcase name="should not toggle isSelected of a day if ngDisabled is true" time="0.027" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekdaySelector"/>
+    <testcase name="should call function provided to ngChange when data is changed" time="0.022" classname="unit Firefox 69.0.0 (Windows 10.0.0).WeekdaySelector"/>
+    <testcase name="should filter appointments by service" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should not filter appointments when the service list is empty" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should filter appointments by service type" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should return all appointments when filter is empty" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should return all appointments when serviceUuids and serviceTypeUuids are empty" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should return all appointments when serviceUuids, serviceTypeUuids, providerUuids and statusLists are empty" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should return filter by providerUuids" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should return all appointments when filters are undfined" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should return filter by providerUuids" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should filter &quot;No Provider&quot; appointments when &quot;No Provider&quot; is selected" time="0.018" classname="unit Firefox 69.0.0 (Windows 10.0.0).appointmentsFilter"/>
+    <testcase name="should change time string to date time" time="0.001" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceViewModel"/>
+    <testcase name="should group weekly availability by starTime and endTime" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentServiceViewModel"/>
+    <testcase name="should change date time format to time string" time="0.001" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentService"/>
+    <testcase name="should re arrange all weeklyAvailabilities by day" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentService"/>
+    <testcase name="should construct weekly availability by day for multiple availabilities" time="0.001" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentService"/>
+    <testcase name="should parse the appointment response" time="0.001" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentViewModel"/>
+    <testcase name="should return true if current user does not have the given privilege " time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentCommonService isCurrentUserHavingPrivilege"/>
+    <testcase name="should return false if current user does not have the given privilege " time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentCommonService isCurrentUserHavingPrivilege"/>
+    <testcase name="should return true if currentUser has manageAppointments privilege" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentCommonService isUserAllowedToPerformEdit"/>
+    <testcase name="should return false if currentUser does not have manage/ownAppointment privileges" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentCommonService isUserAllowedToPerformEdit"/>
+    <testcase name="should return true if currentUser has ownAppointment privilege and selected appointment&apos;s providers list is empty" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentCommonService isUserAllowedToPerformEdit"/>
+    <testcase name="should return true if currentUser has ownAppointment privilege and is the provider in the selected appointment&apos;s providers list" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentCommonService isUserAllowedToPerformEdit"/>
+    <testcase name="should return false if currentUser has ownAppointment privilege and is not the provider in the selected appointment&apos;s providers list" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentCommonService isUserAllowedToPerformEdit"/>
+    <testcase name="should save the appointment" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsService"/>
+    <testcase name="should search for appointments with given info" time="0.012" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsService"/>
+    <testcase name="should search for appointments with given start date and end date" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsService"/>
+    <testcase name="should get all the appointments summary for all the service types" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsService"/>
+    <testcase name="should get all the appointments for a service type" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsService"/>
+    <testcase name="should get appointment by uuid" time="0.013" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsService"/>
+    <testcase name="should change the status of the appointment" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsService"/>
+    <testcase name="should post service data on save" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsServiceService"/>
+    <testcase name="should get service load" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsServiceService"/>
+    <testcase name="should delete the appointment service" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsServiceService"/>
+    <testcase name="should get appointment services with speciality and service types" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsServiceService"/>
+    <testcase name="should get all appointment services with default response" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).AppointmentsServiceService"/>
+    <testcase name="should differentiate between appointments when there are group appointments with same patient and same provider while changing the status of appointments" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should assign appointment when there is a single appointment" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should open ngDialog with properties" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="closePromise should reload current state if value false" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="closePromise should reload current state if value is not false" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should go to new appointment state on navigateTo new" time="0.009" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should go to edit appointment state on navigateTo edit" time="0.011" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should reload current state on navigateTo any other" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should show a pop up on confirmAction" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should change status on confirmation on confirmAction" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should call passed function on cancel on confirmAction" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp"/>
+    <testcase name="should init with empty array if config is undefined" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isAllowedAction"/>
+    <testcase name="should init with configured actions if config is present" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isAllowedAction"/>
+    <testcase name="should return false if config is empty" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isAllowedAction"/>
+    <testcase name="should return true if action exists in config" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isAllowedAction"/>
+    <testcase name="should return false if action does not exist in config" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isAllowedAction"/>
+    <testcase name="should init with empty object if config is undefined" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should init with configured actions if config is present" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return false if no appointment is selected" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return false if allowedActionsByStatus is undefined" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return true if action exists in allowedActionsByStatus" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return false if action does not exist in allowedActionsByStatus" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return false if user does not have the required privileges" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isValidActionAndIsUserAllowedToPerformEdit"/>
+    <testcase name="should return true if maxAppointmentProviders config value is greater than 1" time="0.014" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isEditAllowed"/>
+    <testcase name="should return false if maxAppointmentProviders config value is 1 and logged provider is not in appointment" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).CalendarViewPopUp isEditAllowed"/>
+    <testcase name="should open ngDialog with properties" time="0.008" classname="unit Firefox 69.0.0 (Windows 10.0.0).checkinPopUp"/>
+    <testcase name="should call ngDialog close with two arguments on popUp close" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).checkinPopUp"/>
+    <testcase name="should call confirmAction with correct parameter on checkIn" time="0.006" classname="unit Firefox 69.0.0 (Windows 10.0.0).checkinPopUp"/>
+    <testcase name="should call http get with no params" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).Provider Service"/>
+    <testcase name="should call http get with custom params" time="0.001" classname="unit Firefox 69.0.0 (Windows 10.0.0).Provider Service"/>
+    <testcase name="should get all specialities" time="0.015" classname="unit Firefox 69.0.0 (Windows 10.0.0).SpecialityService"/>
+    <testcase name="Should show confirmation dialog if patient&apos;s visit type is not defaultVisitType and hideStartNewVisitPopUp is not present" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should show confirmation dialog if patient&apos;s visit type is not defaultVisitType and hideStartNewVisitPopUp is present" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should close the visit and create a new encounter if dialog is confirmed" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should close the confirmation dialog if cancelled" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should create an encounter with in the current visit if continued" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should not create encounter with in the current visit if closed" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should show an error message and not close the current visit when defaultVisitType is not configured and yet the user decides to close the current visit and create a new visit of type defaultVisitType" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should show an error message when defaultVisitType is not configured and patient doesn&apos;t have any visit open while admitting" time="0.007" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Admit Patient action if the patient is discharged the visit has closed" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Undo Discharge action if the patient is discharged and visit is open" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Discharge Patient and Transfer Patient action if the patient is admitted" time="0.01" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should have Admit Patient action if the patient is not admitted in given visit" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should throw an error message, when the bed is not selected and trying to transfer a patient" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should throw an error message, when source and destination beds are same while trying to transfer a patient" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should show confirmation dialog, when a bed is selected and trying to transfer a patient" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should create an encounter of type Transfer and assign patient to new bed, On transferConfirmation when the selected bed is still available" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should not transfer the patient when the selected bed is already assigned to some other patient" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should throw an error message, when the bed is not selected and trying to discharge the patient" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should show confirmation dialog, when a bed is selected and trying to discharge the patient" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="Should create an encounter of type Discharge and discharge the patient from the bed, On dischargeConfirmation" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should not admit the patient when the bed has patient" time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should admit the patient in the same visit when the bed available and visit type is default visit type" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should admit the patient and close the current visit and open a new Hospital visit when the bed available and the current visit not of Hospital visit " time="0.003" classname="unit Firefox 69.0.0 (Windows 10.0.0).AdtController"/>
+    <testcase name="should expand the department and raise an event, when stateParams have the have departmentInfo" time="0.005" classname="unit Firefox 69.0.0 (Windows 10.0.0).BedManagementController"/>
+    <testcase name="should expand the department and raise an event, with the stateParams departmentInfo and ignore the bedDetails departmentInfo" time="0.004" classname="unit Firefox 69.0.0 (Windows 10.0.0).BedManagementController"/>
+    <testcase name="should expand the department and raise an event, when rootScope has bedDetails i.e for admitted patients" time="0.002" classname="unit Firefox 69.0.0 (Windows 10.0.0).BedManagementController"/>
+  </testsuite>
+</testsuites>
