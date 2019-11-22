@@ -327,5 +327,18 @@
     "INVESTIGATIONS_PANELS_HEADER_LABEL": "Panels",
     "INVESTIGATIONS_SELECTIONS_HEADER_LABEL": "Selection",
     "CLINICAL_GO_TO_DASHBOARD_LABEL": "Go to IPD dashboard",
-    "NO_FORM_FOUND_FOR_PATIENT": "No Form found for this patient"
+    "NO_FORM_FOUND_FOR_PATIENT": "No Form found for this patient",
+    "DISCHARGE_SUMMURY": "Discharge summary",
+    "PRINT_CLINICAL_DASHBOARD_LABEL": "Print Dashboard",
+    "HOSPITAL_COURSE": "Hospital Course",
+    "HISTORY_AND_EXAMINATION_NOTES": "History and Examination Notes",
+    "DATE_OF_OPERATION": "Date of Operation",
+    "OPERATIVE_PROCEDURE": "Operative Procedure",
+    "FOLLOW_UP_DATE": "Follow up Date",
+    "LAB_INVESTIGATION_NOTES": "Lab Investigation Notes",
+    "RADIOLOGY_NOTES": "Radiology Notes",
+    "OTHER_NOTES": "Other Notes",
+    "ADDITIONAL_ADVICE_ON_DISCHARGE": "Additional Advice on Discharge",
+    "PLAN_FOR_FOLLOW_UP": "Plan for follow up"
+    
 }

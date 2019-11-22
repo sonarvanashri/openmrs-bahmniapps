@@ -20,7 +20,9 @@
 
             <ul class="header-tabs consultation-tabs">
                 <li class="tab-item" ng-repeat="board in availableBoards track by $index" ng-class="{'tab-selected':board.isSelectedTab}">
-                    <a ng-click="showBoard($index)">{{ board | titleTranslate }}</a>
+                    <div ng-show="filterTabByProviderType($index)">
+                        <a ng-click="showBoard($index)">{{ board | titleTranslate }}</a>
+                    </div>
                 </li>
             </ul>
 
@@ -93,11 +95,20 @@
                         </li>
                     </ul>
                 </div>
-                <button ng-if="::!clinicalDashboardConfig.quickPrints" class="dialog-button-group print" ng-click="printDashboard()"
+                
+                <div split-button
+                    options="::printButtonDropdownOptions"
+                    primary-option="::printButtonDropdownOptions[0]"
+                    option-text="optionText"
+                    option-click="printDashboardOrPrescription"
+                    class="dialog-button-group">
+                </div>
+
+                <!-- <button ng-if="::!clinicalDashboardConfig.quickPrints" class="dialog-button-group print" ng-click="printDashboard()"
                         accesskey="{{'CLINICAL_PRINT_ACCESS_KEY'| translate}}" ng-bind-html="'CLINICAL_PRINT_TRANSLATION_KEY'|translate">
                     <i class="fa fa-print"></i>
 
-                </button>
+                </button> -->
                 <div class="dashboard-date-picker" ng-controller="PatientListHeaderController">
                     <div class="retro-date-widget-wrapper fr">
                         <div class="retro-date-widget-header fr">
@@ -108,12 +119,14 @@
                 </div>
             <span class="grouped-buttons">
                  <a class=" btn--left btn--success "
+                    ng-hide="patient.isReadOnly"
                     ng-if="visitHistory.activeVisit || retrospectiveEntry || allowConsultation()"
                     ng-click="openConsultation()"
                     accesskey="{{'CONSULTATION_SHORTCUT_KEY' | translate}}"
                     ng-bind-html="'CONSULTATION_TAB_KEY' | translate">
                  </a>
                 <a class="btn--right btn--success " title="{{'OPEN_IN_NEW_WINDOW'|translate}}"
+                   ng-hide="patient.isReadOnly"
                    ng-if="visitHistory.activeVisit || retrospectiveEntry"
                    ng-click="openConsultationInNewTab()"><i class="fa fa-external-link"></i></a>
            </span>

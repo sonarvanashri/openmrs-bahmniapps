@@ -157,6 +157,11 @@ angular.module('consultation')
                     'dashboard-content': {
                         templateUrl: 'dashboard/views/dashboard.html',
                         controller: 'PatientDashboardController'
+
+                    },
+                     'print-discharge-summury': {
+                        templateUrl: 'dashboard/views/printDischargeSummury.html',
+                        controller: 'dischargeSummuryContoller'
                     }
                 }
             })

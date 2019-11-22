@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bahmni.clinical')
-    .factory('labOrderResultService', ['$http', '$q', 'configurationService', function ($http, $q, configurationService) {
+    .factory('labOrderResultService', ['$http', '$q', 'configurationService','$rootScope' ,function ($http, $q, configurationService,$rootScope) {
         var allTestsAndPanelsConcept = {};
         configurationService.getConfigurations(['allTestsAndPanelsConcept']).then(function (configurations) {
             allTestsAndPanelsConcept = configurations.allTestsAndPanelsConcept.results[0];
@@ -102,6 +102,7 @@ angular.module('bahmni.clinical')
                 params: paramsToBeSent,
                 withCredentials: true
             }).then(function (response) {
+                $rootScope.labResults = response.data;
                 var results = transformGroupSort(response.data, params.initialAccessionCount, params.latestAccessionCount);
                 var sortedConceptSet = new Bahmni.Clinical.ConceptWeightBasedSorter(allTestsAndPanelsConcept);
                 var resultObject = {

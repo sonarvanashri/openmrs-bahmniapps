@@ -38,6 +38,8 @@ angular.module('bahmni.common.domain')
 
         this.getPastAndCurrentDiagnoses = function (patientUuid, encounterUuid) {
             return self.getDiagnoses(patientUuid).then(function (response) {
+                $rootScope.diagnosisData = response.data;
+               // console.log("from diagnosis",$rootScope.diagnosisData );
                 var diagnosisMapper = new Bahmni.DiagnosisMapper($rootScope.diagnosisStatus);
                 var allDiagnoses = diagnosisMapper.mapDiagnoses(response.data);
                 var pastDiagnoses = diagnosisMapper.mapPastDiagnosis(allDiagnoses, encounterUuid);

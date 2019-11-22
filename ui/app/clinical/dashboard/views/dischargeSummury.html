@@ -1,0 +1,120 @@
+<html>
+
+<head>
+<title>Discharge Summury</title>
+<link rel="stylesheet" href="../styles/clinicalPrint.css" media="print"/>
+<style>
+    #mytbl{
+        background-color: lightgrey;
+        width:100%;
+        align-content: left;
+    }
+    #myDiv{
+        margin-top: 5%;
+    }
+
+</style>
+</head>
+
+<body>
+       
+            
+    <div ng-controller="dischargeSummuryContoller" id ="myDiv">
+        
+                <table><tr><td id ="mytbl"><b>Patient Demographics</b></td></tr>
+                <tr> <td><b>Patient Name :</b> &nbsp;<u>{{data.patientName}}</u>&nbsp;-{{data.patientAddress}}</td></tr>
+                <tr><td><b>Patient NID :</b>&nbsp;{{data.patientNID}}</td></tr>
+                <tr><td><b>Date Of Birth : </b>&nbsp;{{data.patientBirthdate | bahmniDate}} <span>&nbsp;{{data.patientAgeEst}}</span></td></tr>
+                <tr><td><b>Age : </b> &nbsp;{{data.patientAge}}</td></tr>
+                <tr><td><b>Gender : </b>&nbsp;{{data.patientGender}}</td></tr>
+                <!-- <tr><td><b>Status : </b>&nbsp; Active in - {{data.patientStatus}}</td></tr>                 -->
+                </table>
+                <br><br>
+            <table>
+                <tr><td colspan="6" style="background-color: lightgrey;"><b>Treatments</b></td></tr>
+
+                <tr ng-repeat="order in data.orders">
+                        <td>{{ order.drugName }}</td>
+                        <td>{{ order.dosage }}</td>
+                        <td>{{order.drugUnit}}</td>
+                        <td><span>{{ order.frequency | translate}},{{ data.route | translate }}
+                            </span></td>
+                        <td>{{ order.duration | translate }}{{ order.durationUnit | translate }}
+                        </td>
+                        <td>{{ order.quantity}}</td>
+                    </tr>
+            </table>
+            <br><br>
+            <table>
+                    <tr><td colspan="6" style="background-color: lightgrey;"><b>Diagnosis</b></td></tr>
+                    <tbody ng-repeat="ans in data.trial">
+                    <tr>
+                        <td >{{ans.diaOrderName}}</td>
+                        <td >{{ans.diaCeratinityName}}</td>
+                        <td >{{ans.diagnosisName}}</td>
+                     </tr>
+                    </tbody>
+            </table>
+            <br><br>
+            <table>
+                    <tr><td colspan="6" style="background-color: lightgrey;"><b>LabResults</b></td></tr>
+                    <tbody ng-repeat="lab in data.labRes">
+                            <tr>
+                                <td >{{lab.orderName}}</td>
+                                <td >{{lab.testName}}</td>
+                                <td >{{lab.testResult}}</td>
+                             </tr>
+                    </tbody>
+                    
+            </table>
+            <br><br>
+        
+            <table style="width:100%" id ="tbl">
+                    <tr><td colspan="6" style="background-color: lightgrey;"><b>Discharge Summury</b></td></tr>
+                <tr>
+                    <td>{{ 'HOSPITAL_COURSE' | translate }} </td>
+                    <td>{{data.hospitalCourse}}</td>
+                </tr>
+                <tr>
+                    <td>{{'HISTORY_AND_EXAMINATION_NOTES' | translate}}</td>
+                    <td>{{data.historyAndExaminationCourse}}</td>
+                </tr>
+                <tr>
+                    <td>{{'DATE_OF_OPERATION' | translate}}</td>
+                    <td>{{data.dateOfOperation}}</td>
+                </tr>
+                <tr>
+                    <td>{{'OPERATIVE_PROCEDURE' | translate}}</td>
+                    <td>{{data.operativeProcedure}}</td>
+                </tr>
+                <tr>
+                    <td>{{'FOLLOW_UP_DATE' |translate}}</td>
+                    <td>{{data.followUpdate}}</td>
+                </tr>
+                <tr>
+                    <td>{{'LAB_INVESTIGATION_NOTES' | translate}}</td>
+                    <td>{{data.labInvestigationNotes}}</td>
+                </tr>
+                <tr>
+                    <td>{{'RADIOLOGY_NOTES' | translate}}</td>
+                    <td>{{data.radiologyNotes}}</td>
+                </tr>
+                <tr>
+                    <td>{{'OTHER_NOTES' |translate}}</td>
+                    <td>{{data.otherNotes}}</td>
+                </tr>
+                <tr>
+                    <td>{{'ADDITIONAL_ADVICE_ON_DISCHARGE' | translate}}</td>
+                    <td>{{data.additionalAdvice}}</td>
+                </tr>
+                <tr>
+                    <td>{{'PLAN_FOR_FOLLOW_UP' | translate}}</td>
+                    <td>{{data.followUpPlan}}</td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</body>
+
+</html>
